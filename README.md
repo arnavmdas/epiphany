@@ -13,7 +13,11 @@ Move to training directory
 cd ./epiphany
 ```
 
-Download dataset from google drive (https://drive.google.com/drive/folders/1UJX6cp-4s0Jbud9jovzuaqnBeORg5R8x?usp=sharing) and save to current directory
+Download dataset from google drive
+
+```
+wget --no-check-certificate https://drive.google.com/drive/folders/1UJX6cp-4s0Jbud9jovzuaqnBeORg5R8x?usp=sharing
+```
 
 
 Run training script
