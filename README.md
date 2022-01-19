@@ -4,13 +4,12 @@
 ### Clone Repository
 ```
 git clone https://github.com/arnavmdas/epiphany.git
-cd ./epiphany
 ```
 
 ### Training
 Move to training directory
 ```
-cd ./epiphany
+cd epiphany/epiphany
 ```
 
 Download dataset from google drive
