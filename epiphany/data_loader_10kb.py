@@ -14,7 +14,7 @@ import time
 #wandb.init()
 
 class Chip2HiCDataset(torch.utils.data.Dataset):
-    def __init__(self, chipseq_path=None, diag_list_dir=None, seq_length=200, window_size=14000, chroms=['chr22'], mode='train', save_dir='./Datasets', zero_pad=True):
+    def __init__(self, seq_length=200, window_size=14000, chroms=['chr22'], mode='train', save_dir='./Epiphany_dataset', zero_pad=True):
                 
         save_path_X = os.path.join(save_dir, 'GM12878_X.h5')
         save_path_y = os.path.join(save_dir, 'GM12878_y.pickle')
