@@ -12,17 +12,8 @@ from model_10kb import *
 from utils import *
 import time
 
-import wandb
-
 print(torch.__version__)
 
-
-def repackage_hidden(h):
-    """Wraps hidden states in new Tensors, to detach them from their history."""
-    if isinstance(h, torch.Tensor):
-        return h.detach()
-    else:
-        return tuple(repackage_hidden(v) for v in h)
 
 def main():
 
@@ -41,6 +32,7 @@ def main():
     args = parser.parse_args()
 
     if args.wandb:
+        import wandb
         wandb.init()
 
 
@@ -50,8 +42,8 @@ def main():
     EXPERIMENT_VERSION = args.v
     LOG_PATH = './logs/' + EXPERIMENT_VERSION + '/'
     LAMBDA = float(args.lam)
-    TRAIN_SEQ_LENGTH = 200 #300
-    TEST_SEQ_LENGTH = 200 #350
+    TRAIN_SEQ_LENGTH = 200 
+    TEST_SEQ_LENGTH = 200 
 
     torch.cuda.set_device(int(args.gpu))
 

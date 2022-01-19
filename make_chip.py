@@ -11,11 +11,9 @@ from model import *
 
 
 chroms = ["chr" + str(i) for i in range(1,23)][::-1]
-print(chroms)
 
-for cell in ['K562']:
-    #mm10/CH12/Epigenetic/
-    chipseq_path = os.path.join('/x0/arnav/Chip2HiC/K562/')
+for cell in ['GM12878']:
+    chipseq_path = os.path.join('./GM12878/')
     inputs = {}
     for chr in chroms:
 
