@@ -7,7 +7,6 @@ import torch
 import pickle
 import h5py as h5
 import os
-from model import *
 from torch.autograd import Variable
 import h5py 
 import time
@@ -24,8 +23,6 @@ class Chip2HiCDataset(torch.utils.data.Dataset):
         self.buf = 100
         self.window_size = window_size
         self.num_channels = 5
-        self.subtract_mean = subtract_mean
-        self.unit_var = unit_var
         self.inputs = {}
         self.labels = {}
         self.sizes = []

@@ -49,7 +49,7 @@ def main():
 
 
     torch.manual_seed(0)    
-    model = Net(int(args.rnn_layers), 5, int(args.window_size)).cuda()
+    model = Net(1, 5, int(args.window_size)).cuda()
     disc = Disc().cuda()
     if args.wandb:
         wandb.watch(model, log='all')
