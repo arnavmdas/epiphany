@@ -85,7 +85,7 @@ def data_load(chrom,
     del bw, value_list
     return bw_list # this is a list of list: [[values for DNaseI], [values for H3K27ac], ...]
 
-def pred_chrom(chrom,
+def pred_chrom(chrom, net, 
                chip_list,
                pred_location,
                window_size=14000,
@@ -148,7 +148,8 @@ def pred_assemble(pred_location,
     chr_coord.to_csv(str.replace(save_loc,".txt","_for_HiC.tsv.gz"),index=False,sep="\t",header=False) #prepare format to save into .hic format
 
 def results_generation(chrom,
-                       cell_type,
+                       net, 
+					   cell_type,
                        bwfile_dir,
                        submatrix_location,
                        assemble_matrix_location,
@@ -175,7 +176,7 @@ def results_generation(chrom,
 
     # 2. generate predictions
     # a) generate submatrices (saved into stacked DataFrames)
-    pred_chrom(chrom=chrom,chip_list=chip_list,pred_location = submatrix_location,
+    pred_chrom(chrom=chrom,net=net,chip_list=chip_list,pred_location = submatrix_location,
                window_size = window_size, seq_length = seq_length, resolution_hic = resolution_hic)
     # b) assemble generated submatrices into the an entire map for a chromosome
     pred_assemble(pred_location = submatrix_location, save_location = assemble_matrix_location, 
