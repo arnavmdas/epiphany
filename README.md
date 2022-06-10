@@ -28,4 +28,6 @@ Run training script
 python3 adversarial.py --wandb
 ```
 
+### Prediction
+
 Generate prediction for GM12878 using pre-trained model: [Google colab](https://colab.research.google.com/drive/1DhnboWQvZcltbXKYzHrfm8JSBu9xG4M3?usp=sharing)
