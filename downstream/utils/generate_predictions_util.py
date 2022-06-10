@@ -35,10 +35,10 @@ import sys
 import os 
 from sklearn.decomposition import TruncatedSVD, PCA
 torch.set_default_tensor_type(torch.DoubleTensor)
+!pip install pyBigWig
+import pyBigWig
 # !pip install hickle
 # import hickle as hkl
-# !pip install pyBigWig
-# import pyBigWig
 
 # 2. Load data - part 2
 
