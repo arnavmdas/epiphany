@@ -142,10 +142,10 @@ def pred_assemble(pred_location,
     col2_list = [int(i*resolution_hic) for i in col2_list]
     chr_pred_flatten = [2**i-1 for i in np.array(chr_pred).flatten().tolist()] #need to exponentiate back (the prediction is under log2 scale)
     chr_coord = pd.DataFrame(np.array((col1_list,col2_list,chr_pred_flatten)).T)
-    chr_coord.to_csv(save_loc,index=False,sep="\t",header=False) #save the assembled coordinate and counts 
+    chr_coord.to_csv(save_location,index=False,sep="\t",header=False) #save the assembled coordinate and counts 
     chr_coord.iloc[:,0] = [int(j) for j in chr_coord.iloc[:,0].to_list()]
     chr_coord.iloc[:,1] = [int(j) for j in chr_coord.iloc[:,1].to_list()]
-    chr_coord.to_csv(str.replace(save_loc,".txt","_for_HiC.tsv.gz"),index=False,sep="\t",header=False) #prepare format to save into .hic format
+    chr_coord.to_csv(str.replace(save_location,".txt","_for_HiC.tsv.gz"),index=False,sep="\t",header=False) #prepare format to save into .hic format
 
 def results_generation(chrom,
                        net, 
