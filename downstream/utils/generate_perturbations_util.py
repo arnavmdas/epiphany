@@ -85,15 +85,12 @@ def data_load(chrom,
     del bw, value_list
     return bw_list # this is a list of list: [[values for DNaseI], [values for H3K27ac], ...]
 
-def prediction(chrom,
-               cell_type,
-			   input_tracks,
-			   bin0,bin1,
-			   perturb_type=None,
-			   track_idxs = [4],
-			   save_txt="/content/temp.txt.gz", 
-			   remap = True):
-	'''
+def prediction(chrom,cell_type,input_tracks,
+               bin0,bin1,
+               perturb_type=None,
+               track_idxs = [4],
+               save_txt="/content/temp.txt.gz", remap = True):
+    '''
 	This function is used to generate perturbed/unperturbed region using pre-trained model. 
 	chrom: which chromosome is of interest
 	cell_type: cell type
@@ -114,7 +111,7 @@ def prediction(chrom,
     #a) Prepare corresponding input region
     start = int((bin0/100+bin1/100)/2 - (window_size+20000)/2)
     x0 = [i[start:start+(window_size+20000)] for i in a]
-	peak_width = abs(bin1-bin0)
+    peak_width = abs(bin1-bin0)
     if perturb_type == "mask":
         for track_idx in track_idxs:
             perturb_a = int((bin0 + bin1)/2) - int(peak_width/2)
@@ -167,11 +164,3 @@ def prediction(chrom,
     chr_for_HiC = pd.DataFrame(np.array((col0,col_chr,col1_list,col0,col0,col_chr,col2_list,col1,value_list)).T)
     chr_for_HiC.to_csv(save_txt,index=False,sep="\t",header=False)
     del pred0, value_list, col0, col_chr,col1_list,col2_list, chr_for_HiC
-
-
-
-
-
-
-
-
