@@ -85,7 +85,8 @@ def data_load(chrom,
     del bw, value_list
     return bw_list # this is a list of list: [[values for DNaseI], [values for H3K27ac], ...]
 
-def prediction(chrom,cell_type,input_tracks,
+def prediction(chrom,net,
+               cell_type,input_tracks,
                bin0,bin1,
                perturb_type=None,
                track_idxs = [4],
