@@ -12,9 +12,9 @@ Epiphany, a neural network to predict cell-type-specific Hi-C contact maps from 
 This repo includes scripts and related files for the Epiphany model [[preprint]](https://www.biorxiv.org/content/10.1101/2021.12.02.470663v1).
 
 - [Quick start](#quick-start-training)
-- [Data preparation](/data_preparation/Readme.md)
-- [Model design and training script](/epiphany/Readme.md)
-- [Downstream applications](/downstream/Readme.md)
+- [Data preparation](/data_preparation)
+- [Model design and training script](/epiphany)
+- [Downstream applications](/downstream)
 
 **Resource repo**: Zenodo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7795868.svg)](https://doi.org/10.5281/zenodo.7795868)
 
