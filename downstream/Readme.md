@@ -1,4 +1,4 @@
-# Helper functions for downstream application
+# Helper functions for downstream applications
 
 ## Pretrained Epiphany model weights
 
@@ -10,6 +10,8 @@ wget -O pretrained_GM12878.pt_model https://wcm.box.com/shared/static/vv8xzxnurf
 ```
 wget -O pretrained_GM12878_5kb.pt_model https://wcm.box.com/shared/static/wo6bc6elqw0leivm7w9gnyte6sgos5om.pt_model
 ```
+
+Pre-trained weights and sample datasets can also be obtained from Zenodo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7795868.svg)](https://doi.org/10.5281/zenodo.7795868).
 
 ## Colab for application examples 
 
