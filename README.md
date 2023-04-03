@@ -9,7 +9,6 @@
 Epiphany, a neural network to predict cell-type-specific Hi-C contact maps from widely available epigenomic tracks. Epiphany uses bidirectional long short-term memory layers to capture long-range dependencies and optionally a generative adversarial network architecture to encourage contact map realism. Epiphany shows excellent generalization to held-out chromosomes within and across cell types, yields accurate TAD and interaction calls, and predicts structural changes caused by perturbations of epigenomic signals.
 
 ## Roadmap
----
 This repo includes scripts and related files for the Epiphany model [[preprint]](https://www.biorxiv.org/content/10.1101/2021.12.02.470663v1).
 
 - [Quick start](#quick-start-training)
@@ -26,7 +25,6 @@ This repo includes scripts and related files for the Epiphany model [[preprint]]
 
 
 ## Quick start training
----
 ### Clone Repository
 ```
 git clone https://github.com/arnavmdas/epiphany.git
