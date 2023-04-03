@@ -1,6 +1,32 @@
-# Epiphany: predicting Hi-C contact maps from 1D epigenomic signals
+
+<img src="docs/Epiphany_prediction.png" width="1000">
+
+
+# Epiphany
+
+### **Epiphany: predicting Hi-C contact maps from 1D epigenomic signals**
+
+Epiphany, a neural network to predict cell-type-specific Hi-C contact maps from widely available epigenomic tracks. Epiphany uses bidirectional long short-term memory layers to capture long-range dependencies and optionally a generative adversarial network architecture to encourage contact map realism. Epiphany shows excellent generalization to held-out chromosomes within and across cell types, yields accurate TAD and interaction calls, and predicts structural changes caused by perturbations of epigenomic signals.
+
+## Roadmap
+---
+This repo includes scripts and related files for the Epiphany model [[preprint]](https://www.biorxiv.org/content/10.1101/2021.12.02.470663v1).
+
+- [Quick start](#quick-start-training)
+- [Data preparation](/data_preparation/Readme.md)
+- [Model design and training script](/epiphany/Readme.md)
+- [Downstream applications](/downstream/Readme.md)
+
+**Resource repo**: Zenodo [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7795868.svg)](https://doi.org/10.5281/zenodo.7795868)
+
+- Sample datasets: `GM12878_X.h5` and `GM12878_y.pickle` for input and target sample datasets for Epiphany training
+- Pretrained model weights: 
+>- `pretrained_10kb.pt_model`: pretrained weights of 10kb model 
+>- `pretrained_5kb.pt_model`: pretrained weights of 5kb model
+
 
 ## Quick start training
+---
 ### Clone Repository
 ```
 git clone https://github.com/arnavmdas/epiphany.git
