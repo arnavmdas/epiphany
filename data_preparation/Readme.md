@@ -5,7 +5,7 @@ Scripts in this folder create input and target datasets for training Epiphany mo
 
 - `bam2bw.sh`: creates .bw file for each epigenomic track.
 - `hicdcplus_norm_sig.R`: normalizes Hi-C matrices using [HiC-DC+](https://github.com/mervesa/HiCDCPlus), and calculate significant interactions.
-- ``: converts normalized Hi-C counts into list
+- `convert_hic_norm.py`: converts normalized Hi-C counts into list
 - `prepare_data.py`: prepares input and target datasets for the training dataloader
 
 Quick link: [input preparation](#step-1-download-and-prepare-epigenomic-tracks-for-model-input) | [target preparation](#step-2-prepare-normalized-hi-c-contact-maps-as-training-targets) | [pair input and target data](#step-3-create-paired-input-and-target-data-for-epiphany-training)
