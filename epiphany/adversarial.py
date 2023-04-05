@@ -7,8 +7,6 @@ import numpy as np
 import torch.nn.functional as F
 import torch.optim as optim
 import argparse
-from data_loader_10kb import *
-from model_10kb import *
 from utils import *
 import time
 
@@ -26,11 +24,20 @@ def main():
     parser.add_argument("--lam", help="tradeoff between l2 and adversarial loss", default="0.95")
     parser.add_argument("--window_size", help="Context (in terms of 100kb) for each orthogonal vector", default="14000")
     parser.add_argument("--m", help="additional comments", default="")
+    parser.add_argument("--high_res", action='store_true', help="Use if predicting 5kb resolution Hi-C (10kb is used by default)")
     parser.add_argument('--wandb', action='store_true', help='Toggle wandb')
  
 
     args = parser.parse_args()
 
+    
+    if args.high_res:
+        from data_loader_5kb import *
+        from model_5kb import *
+    else:
+        from data_loader_10kb import *
+        from model_10kb import *
+    
     if args.wandb:
         import wandb
         wandb.init()
