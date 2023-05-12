@@ -63,3 +63,7 @@ python3 adversarial.py --wandb
 
 - Generate contact map of GM12878 chromosome 3 using pre-trained model at 10kb resolution: [Google colab](https://colab.research.google.com/drive/1DhnboWQvZcltbXKYzHrfm8JSBu9xG4M3?usp=sharing)
 - Generate contact map of a certain region on H1ES cell chromosome 8 [chr8:53167500-55167500] with original and perturbed epigenomic signals using pretrained model at 5kb resolution: [Google colab](https://colab.research.google.com/drive/1KjWXWl3OEZXrZGtu-rkG0nw0Odix6syP?authuser=1#scrollTo=opwMnpPFJaC7)
+
+### Contact
+
+If you have any questions, please feel free to contact Rui Yang ([ruy4001@med.cornell.edu](ruy4001@med.cornell.edu)), Arnav Das ([arnavmd2@uw.edu](arnavmd2@uw.edu)). 
